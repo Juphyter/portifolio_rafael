@@ -113,6 +113,10 @@ svg:hover {
     padding-bottom: 10px;
 }
 
+.project-title {
+    text-align: center;
+}
+
 .project-link {
     display: flex;
     justify-content: space-between;
