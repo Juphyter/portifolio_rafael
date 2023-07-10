@@ -133,11 +133,12 @@ svg:hover {
     border: solid 3px rgb(250, 135, 240);
 }
 
-.sites p {
+.subtitle {
     font-size: 16px;
     color: #fff;
     padding-bottom: 10px;
     font-weight: bold;
+    text-align: center;
 }
 
 .sites button {
