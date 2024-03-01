@@ -1,3 +1,6 @@
+const myAge = document.getElementById("myAge");
+
+
 /**
 * Template Name: iPortfolio
 * Updated: Jan 29 2024 with Bootstrap v5.3.2
@@ -260,3 +263,29 @@
   new PureCounter();
 
 })()
+
+/* Calc idade */
+
+function calcularIdade(dataNascimento) {
+  const dataAtual = new Date();
+  const anoAtual = dataAtual.getFullYear();
+  const mesAtual = dataAtual.getMonth() + 1;
+  const diaAtual = dataAtual.getDate();
+
+  const anoNascimento = dataNascimento.getFullYear();
+  const mesNascimento = dataNascimento.getMonth() + 1;
+  const diaNascimento = dataNascimento.getDate();
+
+  let idade = anoAtual - anoNascimento;
+
+  if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+      idade--;
+  }
+
+  return idade;
+}
+
+const dataNascimento = new Date('2000-07-20');
+const idadeAtual = calcularIdade(dataNascimento);
+
+myAge.innerHTML = idadeAtual;
